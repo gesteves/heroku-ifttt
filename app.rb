@@ -18,7 +18,7 @@ post "/ifttt/:key" do
   }
   puts "Sending to IFTTT: #{body.to_json}"
   puts "URL: #{url}"
-  HTTParty.post(url, body: body.to_json, headers: { "Content-Type": "application/json" })
+  HTTParty.post(url, body: body.to_json, headers: { "Content-Type" => "application/json" })
   status 200
   body "ok"
 end
