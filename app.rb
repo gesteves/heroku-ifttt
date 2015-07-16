@@ -16,6 +16,7 @@ post "/ifttt/:key" do
     value1: "#{params[:app]} #{params[:release]} was deployed to Heroku by #{params[:user]}",
     value2: params[:url]
   }
+  puts "Sending to IFTTT: #{body.to_s}"
   HTTParty.post(url, body: body.to_json)
   status 200
   body "ok"
