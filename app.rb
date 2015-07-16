@@ -17,6 +17,7 @@ post "/ifttt/:key" do
     value2: params[:url]
   }
   puts "Sending to IFTTT: #{body.to_json}"
+  puts "URL: #{url}"
   HTTParty.post(url, body: body.to_json)
   status 200
   body "ok"
