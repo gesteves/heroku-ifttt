@@ -1,0 +1,10 @@
+{
+  "name": "Heroku IFTTT",
+  "description": "Send Heroku deploys to IFTTT",
+  "keywords": [
+    "heroku",
+    "ifttt"
+  ],
+  "repository": "https://github.com/gesteves/heroku-ifttt",
+  "success_url": "https://github.com/gesteves/heroku-ifttt"
+}
