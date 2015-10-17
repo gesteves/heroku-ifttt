@@ -14,7 +14,8 @@ post "/ifttt/:key" do
   url = "https://maker.ifttt.com/trigger/heroku_deploy/with/key/#{params[:key]}"
   body = {
     value1: "#{params[:app]} #{params[:release]} was deployed to Heroku by #{params[:user]}",
-    value2: params[:url]
+    value2: params[:url],
+    value3: "#{params[:app]} #{params[:release]}"
   }
   HTTParty.post(url, body: body.to_json, headers: { "Content-Type" => "application/json" })
   status 200
